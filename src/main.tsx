@@ -14,7 +14,7 @@ import HomeScreen from "./frontend/screens/HomeScreen";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index={true} path="/" element={<HomeScreen />} />
+      <Route index element={<HomeScreen />} />
     </Route>
   )
 );
