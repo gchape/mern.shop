@@ -1,10 +1,7 @@
-import { JSX, StrictMode } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-
-const App = (): JSX.Element => {
-  return <></>;
-};
+import "bootstrap/dist/css/bootstrap.min.css";
+import App from "./frontend/App";7
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
