@@ -12,7 +12,7 @@ const renderRating = (value: number, color: string): JSX.Element[] => {
 
   for (let rating = value; rating >= 0.5; rating--) {
     ratings.push(
-      <span>
+      <span key={rating + Math.random()}>
         {rating >= 1 ? (
           <FaStar color={color} />
         ) : rating >= 0.5 ? (

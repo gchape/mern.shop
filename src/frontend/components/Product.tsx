@@ -1,14 +1,13 @@
 import { Card } from "react-bootstrap";
-import { TProduct } from "../../assets/products";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 
 type ProductProps = {
-  product: TProduct;
+  product: ProductInfo;
 };
 
 function Product({ product }: ProductProps) {
-  const { _id, image, name, price, rating, numReviews } = product;
+  const { _id, image, name, rating, numReviews, price } = product;
 
   return (
     <Card className="my-3 p-3 rounded">

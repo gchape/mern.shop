@@ -1,17 +1,4 @@
-export type TProduct = {
-  _id: string;
-  name: string;
-  image: string;
-  description: string;
-  brand: string;
-  category: string;
-  price: number;
-  countInStock: number;
-  rating: number;
-  numReviews: number;
-};
-
-const products: TProduct[] = [
+const products = [
   {
     _id: "1",
     name: "Airpods Wireless Bluetooth Headphones",
