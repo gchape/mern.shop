@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"npm run server\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "concurrently \"vite\" \"npm run server\"",
     "server": "nodemon --watch src/backend --exec node src/backend/server.js"
   },
   "dependencies": {
