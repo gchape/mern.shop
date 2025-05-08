@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap";
 import { TProduct } from "../../assets/products";
+import { Link } from "react-router-dom";
 
 type ProductProps = {
   product: TProduct;
@@ -10,16 +11,16 @@ function Product({ product }: ProductProps) {
 
   return (
     <Card className="my-3 p-3 rounded">
-      <a href={`/product/${_id}`}>
+      <Link to={`/product/${_id}`}>
         <Card.Img src={image} variant="top" />
-      </a>
+      </Link>
 
       <Card.Body>
-        <a href={`/product/${_id}`}>
+        <Link to={`/product/${_id}`}>
           <Card.Title as="div">
             <strong>{name}</strong>
           </Card.Title>
-        </a>
+        </Link>
         <Card.Text as="h3">${price}</Card.Text>
       </Card.Body>
     </Card>
