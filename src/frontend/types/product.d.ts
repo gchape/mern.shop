@@ -1,4 +1,4 @@
-type ProductInfo = {
+type ProductDetails = {
   _id: string;
   name: string;
   image: string;

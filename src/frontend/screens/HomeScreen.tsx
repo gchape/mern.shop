@@ -3,12 +3,12 @@ import Product from "../components/Product.tsx";
 import { useEffect, useState } from "react";
 
 function HomeScreen() {
-  const [products, setProducts] = useState<ProductInfo[] | null>(null);
+  const [products, setProducts] = useState<ProductDetails[] | null>(null);
 
   useEffect(() => {
     (async () => {
       const products = await fetch("/api/products")
-        .then((resp) => resp.json() as Promise<ProductInfo[]>)
+        .then((resp) => resp.json() as Promise<ProductDetails[]>)
         .catch(() => null);
 
       if (products) {
@@ -22,7 +22,7 @@ function HomeScreen() {
       <>
         <h1>Latest Products</h1>
         <Row>
-          {products.map((product: ProductInfo) => (
+          {products.map((product: ProductDetails) => (
             <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
               <Product product={product} />
             </Col>

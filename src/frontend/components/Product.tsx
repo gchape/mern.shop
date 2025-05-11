@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Rating from "./Rating";
 
 type ProductProps = {
-  product: ProductInfo;
+  product: ProductDetails;
 };
 
 function Product({ product }: ProductProps) {

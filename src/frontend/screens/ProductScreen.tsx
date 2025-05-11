@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 
 const ProductScreen = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState<ProductInfo | null>(null);
+  const [product, setProduct] = useState<ProductDetails | null>(null);
 
   useEffect(() => {
     (async () => {
       const product = await fetch(`/api/product/${id}`)
-        .then((resp) => resp.json() as Promise<ProductInfo>)
+        .then((resp) => resp.json() as Promise<ProductDetails>)
         .catch(() => null);
 
       if (product) {

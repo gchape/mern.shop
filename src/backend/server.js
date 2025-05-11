@@ -1,11 +1,14 @@
 import express from "express";
 import products from "./data/products.js";
 import dotenv from "dotenv";
+import connectDB from "./config/db.js";
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
+
+connectDB();
 
 app.get("/api/products", (_, resp) => {
   resp.json(products);
