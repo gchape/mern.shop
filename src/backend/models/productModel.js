@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const reviewSchema: Schema = new Schema(
+const reviewSchema = new Schema(
   {
     user: {
       type: Schema.Types.ObjectId,
@@ -25,7 +25,7 @@ const reviewSchema: Schema = new Schema(
   }
 );
 
-const productSchema: Schema = new Schema(
+const productSchema = new Schema(
   {
     user: {
       type: Schema.Types.ObjectId,

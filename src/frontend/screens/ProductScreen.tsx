@@ -10,7 +10,7 @@ const ProductScreen = () => {
 
   useEffect(() => {
     (async () => {
-      const product = await fetch(`/api/product/${id}`)
+      const product = await fetch(`/api/products/${id}`)
         .then((resp) => resp.json() as Promise<ProductDetails>)
         .catch(() => null);
 

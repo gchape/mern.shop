@@ -8,9 +8,12 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "nodemon --watch src/backend --exec node src/backend/server.js"
+    "server": "nodemon --watch src/backend --exec node src/backend/server.js",
+    "data:import": "node src/backend/seeder.js",
+    "data:destroy": "node src/backend/seeder.js -d"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "bootstrap": "^5.3.6",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
