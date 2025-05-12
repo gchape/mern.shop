@@ -2,6 +2,7 @@ import { Row, Col } from "react-bootstrap";
 import { useGetProductsQuery } from "../slices/productSlice";
 import Product from "../components/Product";
 import { SerializedError } from "@reduxjs/toolkit";
+import Loader from "../components/Leader";
 
 const HomeScreen = () => {
   const { data: products, isLoading, error } = useGetProductsQuery(undefined);
@@ -9,13 +10,13 @@ const HomeScreen = () => {
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <Loader />
       ) : error ? (
         <div>
           {(() => {
             if ("data" in error) {
               const errData = error.data as { message?: string };
-              
+
               return errData?.message || "Unexpected error with data.";
             } else if ("error" in error) {
               return error.error;

@@ -4,6 +4,7 @@ import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import { useGetProductDetailsQuery } from "../slices/productSlice";
 import Rating from "../components/Rating";
 import { SerializedError } from "@reduxjs/toolkit";
+import Loader from "../components/Leader";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
@@ -20,7 +21,7 @@ const ProductScreen = () => {
         Go Back
       </Link>
       {isLoading ? (
-        <div>Loading...</div>
+        <Loader />
       ) : error ? (
         <div>
           {(() => {
